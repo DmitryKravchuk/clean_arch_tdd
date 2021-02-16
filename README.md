@@ -1,4 +1,4 @@
-# flutter_app_redux
+# flutter_clean_arch_tdd
 
 A new Flutter application.
 
