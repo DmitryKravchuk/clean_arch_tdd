@@ -4,6 +4,7 @@ import 'package:flutter_app_redux/features/number_trivia/presentation/pages/numb
 import 'injection_container.dart' as di;
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await di.init();
   runApp(MyApp());
 }
@@ -11,13 +12,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Number Trivia App',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          accentColor: Colors.green,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        home: NumberTriviaPage());
+    return MaterialApp(title: 'Number Trivia App', home: NumberTriviaPage());
   }
 }

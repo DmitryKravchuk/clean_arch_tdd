@@ -1,3 +1,4 @@
+import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:flutter_app_redux/core/util/input_converter.dart';
 import 'package:flutter_app_redux/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:flutter_app_redux/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
@@ -38,5 +39,5 @@ Future<void> init() async {
   final sharedPreferences = await SharedPreferences.getInstance();
   sl.registerLazySingleton(() => sharedPreferences);
   sl.registerLazySingleton(() => http.Client());
-  sl.registerLazySingleton(() => sharedPreferences);
+  sl.registerLazySingleton(() => DataConnectionChecker());
 }
